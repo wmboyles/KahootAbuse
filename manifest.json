@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Kahoot Abuse",
+  "version": "0.1",
+  "description": "Changes Kahoot error messages to be mean. Because you deserve it.",
+  "content_scripts": [
+    {
+        "matches": ["*://kahoot.it/*"],
+        "js": ["content.js"]
+    }
+  ],
+  
+  "background": {
+    "matches": ["*//kahoot.it/*"],
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "*://kahoot.it/*", "tabs", "webNavigation"
+  ]
+}
